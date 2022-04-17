@@ -1,1 +1,532 @@
-/* Copy and paste your CSS from CodePen into here */
+/*
+
+```
+FONT-SIZES (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 / 124 / 248
+```
+
+
+```
+SPACING SYSTEM (px):
+2 / 4 / 6 / 8 / 12 / 18 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 104 / 128
+```
+
+```
+COLORS (hex):
+#191919;
+```
+
+
+*/
+
+/* RESET STYLES */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* GENERAL STYLES */
+#main {
+  position: relative;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  color: #333333;
+  border-bottom: 8px solid #5c7cfa;
+}
+
+.main-container {
+  padding: 64px 20px 20px 20px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #5c7cfa;
+}
+
+/* NAVIGATION STYLES */
+nav {
+  width: 100vw;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.nav-container {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  color: #4c4c4c;
+}
+
+.south-korean-flag-icon {
+  font-size: 24px;
+}
+
+.south-korea-text:link,
+.south-korea-text:visited {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #666666;
+}
+
+.burger-menu-btn {
+  width: 24px;
+  height: 24px;
+  color: #191919;
+}
+
+.nav-links {
+  display: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-link-container {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+.nav-link-container a:link,
+.nav-link-container a:visited {
+  text-decoration: none;
+  color: #4c4c4c;
+}
+
+.nav-link-container a:hover,
+.nav-link-container a:active {
+  color: #5c7cfa;
+}
+
+/* POPOUT-MENU */
+.popout-menu {
+  position: fixed;
+  right: 0;
+  background-color: #333333;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  background-color: #5c7cfa;
+  visibility: hidden;
+}
+
+.popout-menu-btn-close-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  color: #ffc9c9;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.popout-menu-btn-close-icon:hover,
+.popout-menu-btn-close-icon:active {
+  stroke: #e03131;
+}
+
+.popout-menu-links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 48px;
+}
+
+.popout-menu-links a:link,
+.popout-menu-links a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.popout-menu-links a:hover,
+.popout-menu-links a:active {
+  color: #3b5bdb;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.popout-menu-btn-close-icon {
+  cursor: pointer;
+}
+
+.logo-pop {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.logo-pop a {
+  color: rgba(248, 249, 250, 0.8) !important;
+}
+
+/* TITLE */
+.title-container {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 48px;
+  padding-top: 48px;
+}
+
+#title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: -6px;
+}
+
+.sub-title {
+  font-size: 20px;
+  color: #333333;
+  letter-spacing: 1.4px;
+}
+
+/* HEADER */
+.header {
+  margin-bottom: 80px;
+}
+
+#img-div {
+  text-align: center;
+}
+
+#image {
+  max-width: 100%;
+  border-radius: 16px;
+  margin-bottom: 8px;
+}
+
+#image-caption {
+  font-size: 14px;
+  color: #808080;
+}
+
+/* SECTION-ABOUT */
+.section-about {
+  background-color: #edf2ff;
+  padding: 32px 24px;
+  border-radius: 16px;
+}
+
+.section-about-heading,
+.consonants-title,
+.vowels-title,
+.words-title,
+.congratulations-title {
+  margin-bottom: 16px;
+}
+
+.about-text,
+.card1-text,
+.card2-text,
+.card3-text,
+.consonants-text,
+.vowels-text,
+.words-text,
+.congratulations-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.about-text {
+  font-size: 18px;
+}
+
+/* SECTION-HOW */
+.section-how-heading {
+  margin-bottom: 64px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 64px;
+}
+
+.card1-container,
+.card2-container,
+.card3-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.card1,
+.card2,
+.card3 {
+  background-color: #f1f3f5;
+  width: 60px;
+  height: 80px;
+  border-radius: 16px;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.card1-character {
+  position: absolute;
+  top: 40%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: 800;
+  color: #4c4c4c;
+}
+
+.circle1 {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(186, 200, 255, 0.4);
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card2-character {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  color: #4c4c4c;
+}
+
+.circle2 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgb(186, 200, 255, 0.4);
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card3-character1 {
+  top: 40%;
+}
+
+/* SECTION-PDF */
+.section-pdf {
+  padding: 48px 48px;
+  background-color: #5c7cfa;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pdf-icon {
+  width: 48px;
+  stroke: #fff;
+  margin-bottom: 16px;
+}
+
+.pdf-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.pdf-paragraph {
+  color: rgb(237, 242, 255, 0.9);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.pdf-btn:link,
+.pdf-btn:visited {
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 16px;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 16px 32px;
+  color: #5c7cfa;
+}
+
+.pdf-btn:hover,
+.pdf-btn:active {
+  background-color: #3b5bdb;
+  color: #fff;
+}
+
+/* SECTION CONSONANTS & VOWELS */
+.section-about,
+.section-how,
+.section-consonants,
+.section-vowels,
+.section-pdf,
+.section-words {
+  margin-bottom: 128px;
+}
+
+.consonants-cards-container,
+.vowels-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 16px;
+  height: 280px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+}
+
+.consonants-text,
+.vowels-text {
+  margin-bottom: 64px;
+}
+
+.korean-character {
+  font-size: 124px;
+  font-weight: 800;
+  color: #5c7cfa;
+  margin-bottom: 24px;
+}
+
+.english-character {
+  font-size: 24px;
+  font-weight: 500;
+  color: #666666;
+  color: #bac8ff;
+}
+
+/* SECTION-WORDS */
+.words-cards-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.words-card {
+  border-radius: 16px;
+  display: flex;
+  padding: 24px 48px;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  justify-content: center;
+}
+
+.words-text {
+  margin-bottom: 64px;
+}
+
+.icon-container,
+.words-translation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+}
+
+.emoji-icon {
+  font-size: 36px;
+}
+
+.emoji-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #808080;
+}
+
+.icon-korean-characters {
+  font-size: 36px;
+  font-weight: 500;
+  color: #5c7cfa;
+}
+
+.icon-english-characters {
+  font-size: 16px;
+  font-weight: 600;
+  color: #bac8ff;
+}
+
+/* SECTION-FOOTER */
+.section-footer {
+  margin-bottom: 64px;
+}
+
+.section-footer a:link,
+.section-footer a:visited {
+  color: #333333;
+}
+
+.section-footer a:hover,
+.section-footer a:active {
+  color: #5c7cfa;
+}
+
+.signout {
+  margin-top: 64px;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.signout a:link,
+.signout a:visited {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.signout a:hover,
+.signout a:active {
+  color: #5c7cfa;
+}

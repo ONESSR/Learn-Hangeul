@@ -1,0 +1,48 @@
+@media screen and (min-width: 640px) {
+  /* GENERAL STYLES */
+  h2 {
+    font-size: 36px;
+  }
+
+  /* NAV-CONTAINER */
+  .nav-links {
+    display: block;
+  }
+
+  .burger-menu-btn {
+    display: none;
+  }
+
+  .nav-container {
+    padding: 20px 48px 20px 48px;
+  }
+
+  /* SECTION-HOW */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 48px;
+  }
+
+  .card1-container,
+  .card2-container,
+  .card3-container {
+    width: initial;
+    text-align: initial;
+    align-items: initial;
+  }
+
+  /* SECTION-CONSONANTS */
+  .consonants-cards-container,
+  .vowels-cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* SECTION-WORDS */
+  .words-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
