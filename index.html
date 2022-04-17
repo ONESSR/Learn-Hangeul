@@ -1,12 +1,419 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <title>My awesome tribute page mofos</title>
-    <!-- The line below links your html document to your css stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Hangeul</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media-queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <!-- Copy and paste your HTML from CodePen into here -->
+
+  <body id="main">
+    <nav class="nav-container">
+      <div class="logo-container">
+        <p class="south-korean-flag-icon">🇰🇷</p>
+        <a href="index.html" class="south-korea-text">Learn Korean</a>
+      </div>
+      <a href="#" class="burger-menu-btn" id="show-btn" onclick="show()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="burger-menu-btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </a>
+      <div class="nav-links">
+        <ul class="nav-link-container">
+          <li><a href="#about">About</a></li>
+          <li><a href="#how">How</a></li>
+          <li><a href="#alphabet">Alphabet</a></li>
+          <li><a href="#words">Words</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="popout-menu" id="popout-menu">
+      <div class="logo-container logo-pop">
+        <p class="south-korean-flag-icon">🇰🇷</p>
+        <a href="index.html" class="south-korea-text" onclick="closePop()"
+          >Learn Korean</a
+        >
+      </div>
+      <a href="#" class="popout-menu-btn-close" onclick="closePop()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="popout-menu-btn-close-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      </a>
+      <ul class="popout-menu-links">
+        <li><a href="index.html" onclick="closePop()">Home</a></li>
+        <li><a href="#about" onclick="closePop()">About</a></li>
+        <li><a href="#how" onclick="closePop()">How</a></li>
+        <li><a href="#alphabet" onclick="closePop()">Alphabet</a></li>
+        <li><a href="#words" onclick="closePop()">Words</a></li>
+      </ul>
+    </div>
+
+    <div class="main-container">
+      <header class="header">
+        <div class="title-container">
+          <h1 id="title">Hangeul</h1>
+          <p class="sub-title">The Korean Alphabet</p>
+        </div>
+
+        <figure id="img-div">
+          <img
+            src="./images/andrea-de-santis-AToz_rIbKUY-unsplash.jpg"
+            id="image"
+            alt="Electric night life scenary in South Korea with lot of Korean neon signs."
+          />
+          <figcaption id="image-caption">
+            (Electric night life with neon signs in South Korea.)
+          </figcaption>
+        </figure>
+        <span id="about"></span>
+      </header>
+
+      <section class="section-about">
+        <h2 class="section-about-heading">About</h2>
+        <p class="about-text">
+          Hangul is the writing system of the Korean language. Hangul is made up
+          of 14 consonants and 10 vowels, making it an alphabet with a total of
+          24 letters. It is the official writing system in South Korea and North
+          Korea (where it is known as Chosŏn muntcha), and it is used by
+          diaspora Koreans across the world. Many people say it is one of the
+          easist and most fun languages to learn - so let's do just that now and
+          pick up a few words while we're at it!
+          <span id="how"></span>
+        </p>
+      </section>
+
+      <section class="section-how">
+        <h2 class="section-how-heading">How to use this website?</h2>
+        <div class="cards-container">
+          <div class="card1-container">
+            <div class="card1">
+              <span class="circle1"></span>
+              <p class="card1-character">ᄀ</p>
+            </div>
+            <h3 class="card1-heading">Korean alphabet character</h3>
+            <p class="card1-text">
+              The main area of each card represents a single character of the
+              Korean alphabet.
+            </p>
+          </div>
+
+          <div class="card2-container">
+            <div class="card2">
+              <span class="circle2"></span>
+              <p class="card2-character">g</p>
+            </div>
+            <h3 class="card2-heading">Sound of Korean character</h3>
+            <p class="card2-text">
+              The English character indicates the sound of the Korean character.
+            </p>
+          </div>
+
+          <div class="card3-container">
+            <div class="card3">
+              <span class="circle1"></span>
+              <span class="circle2"></span>
+              <p class="card1-character card3-character1">ᄀ</p>
+              <p class="card2-character card3-character2">g</p>
+            </div>
+            <h3 class="card3-heading">Consonants & Vowels</h3>
+            <p class="card3-text">
+              The full card indicates the character, sound & consonant or vowel.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-pdf">
+        <div class="pdf-svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="pdf-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+            />
+          </svg>
+        </div>
+        <div class="pdf-text">
+          <p class="pdf-title">Print, Stick & Learn</p>
+          <p class="pdf-paragraph">Download Free Hangeul PDF.</p>
+        </div>
+        <a
+          href="./images/Learn-Hangeul-The-Korean-Alphabet.pdf"
+          target="_blank"
+          class="pdf-btn"
+          >Download</a
+        >
+        <span id="alphabet"></span>
+      </div>
+
+      <section class="section-consonants">
+        <h2 class="consonants-title">Consonants</h2>
+        <p class="consonants-text">
+          There are 14 basic consonants in Hangeul that we will concentrate on
+          learning now! Some of these double to form 'tense consonants', but
+          lets save that for when you take your learning to the next level.
+        </p>
+        <div class="consonants-cards-container">
+          <div class="consonants-card1 card">
+            <div class="korean-character">ᄀ</div>
+            <div class="english-character">g</div>
+          </div>
+
+          <div class="consonants-card2 card">
+            <div class="korean-character">ᄂ</div>
+            <div class="english-character">n</div>
+          </div>
+
+          <div class="consonants-card3 card">
+            <div class="korean-character">ᄃ</div>
+            <div class="english-character">d</div>
+          </div>
+
+          <div class="consonants-card4 card">
+            <div class="korean-character">ㄹ</div>
+            <div class="english-character">rl</div>
+          </div>
+
+          <div class="consonants-card5 card">
+            <div class="korean-character">ㅁ</div>
+            <div class="english-character">m</div>
+          </div>
+
+          <div class="consonants-card6 card">
+            <div class="korean-character">ㅂ</div>
+            <div class="english-character">b</div>
+          </div>
+
+          <div class="consonants-card7 card">
+            <div class="korean-character">ㅅ</div>
+            <div class="english-character">s</div>
+          </div>
+
+          <div class="consonants-card8 card">
+            <div class="korean-character">ㅇ</div>
+            <div class="english-character">(silent)</div>
+          </div>
+
+          <div class="consonants-card9 card">
+            <div class="korean-character">ㅈ</div>
+            <div class="english-character">j</div>
+          </div>
+
+          <div class="consonants-card10 card">
+            <div class="korean-character">ㅊ</div>
+            <div class="english-character">ch</div>
+          </div>
+
+          <div class="consonants-card11 card">
+            <div class="korean-character">ㅋ</div>
+            <div class="english-character">k</div>
+          </div>
+
+          <div class="consonants-card12 card">
+            <div class="korean-character">ㅌ</div>
+            <div class="english-character">t</div>
+          </div>
+
+          <div class="consonants-card13 card">
+            <div class="korean-character">ㅍ</div>
+            <div class="english-character">p</div>
+          </div>
+
+          <div class="consonants-card14 card">
+            <div class="korean-character">ㅎ</div>
+            <div class="english-character">h</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-vowels">
+        <h2 class="vowels-title">Vowels</h2>
+        <p class="vowels-text">
+          There are 10 basic vowels in Hangeul that we will concentrate on
+          learning now! When you are more advanced additional letters can be
+          combined for more sounds, but let's walk before we can run.
+        </p>
+        <div class="vowels-cards-container">
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅏ</div>
+            <div class="english-character">a</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅑ</div>
+            <div class="english-character">ya</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅓ</div>
+            <div class="english-character">eo</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅕ</div>
+            <div class="english-character">yeo</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅗ</div>
+            <div class="english-character">o</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅛ</div>
+            <div class="english-character">yo</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅜ</div>
+            <div class="english-character">u</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅠ</div>
+            <div class="english-character">yu</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅡ</div>
+            <div class="english-character">eu</div>
+          </div>
+
+          <div class="vowels-card1 card">
+            <div class="korean-character">ㅣ</div>
+            <div class="english-character">ee</div>
+          </div>
+        </div>
+        <span id="words"></span>
+      </section>
+
+      <section class="section-words">
+        <h2 class="words-title">Try these words!</h2>
+        <p class="words-text">
+          Great job making it this far! Now that you know the Korean alphabet
+          have a go at trying to say these Korean words. Koreans read characters
+          from left to right & top down - Go ahead and impress yourself!
+        </p>
+        <div class="words-cards-container">
+          <div class="words-card words-card1">
+            <div class="icon-container">
+              <p class="emoji-icon">🚗</p>
+              <p class="emoji-text">car</p>
+            </div>
+
+            <div class="words-translation-container">
+              <p class="icon-korean-characters">차</p>
+              <p class="icon-english-characters">cha</p>
+            </div>
+          </div>
+
+          <div class="words-card words-card2">
+            <div class="icon-container">
+              <p class="emoji-icon">🦁</p>
+              <p class="emoji-text">lion</p>
+            </div>
+
+            <div class="words-translation-container">
+              <p class="icon-korean-characters">사자</p>
+              <p class="icon-english-characters">saja</p>
+            </div>
+          </div>
+
+          <div class="words-card words-card3">
+            <div class="icon-container">
+              <p class="emoji-icon">💧</p>
+              <p class="emoji-text">water</p>
+            </div>
+
+            <div class="words-translation-container">
+              <p class="icon-korean-characters">물</p>
+              <p class="icon-english-characters">mul</p>
+            </div>
+          </div>
+
+          <div class="words-card words-card4">
+            <div class="icon-container">
+              <p class="emoji-icon">🎁</p>
+              <p class="emoji-text">gift</p>
+            </div>
+
+            <div class="words-translation-container">
+              <p class="icon-korean-characters">선물</p>
+              <p class="icon-english-characters">sonmul</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="section-footer">
+        <h2 class="congratulations-title">Congratulations</h2>
+        <p class="congratulations-text">
+          You made it! You have now learned the main characters that
+          collectively create Hangeul - The Korean Alphabet (and you can say a
+          few words too!). <br /><br />
+          To learn more about how to pronounce the letters of Hangeul you can
+          <a
+            href="https://www.youtube.com/watch?v=AqFGHMxWtYk&t=3s"
+            id="tribute-link"
+            target="_blank"
+            >watch this fun video.</a
+          >
+          To learn more about the history of the Korean alphabet and to learn
+          more words and sentences which build on the concepts learned on this
+          website please consider purchasing this ultra fun and interactive
+          book:
+          <a
+            href="https://talktomeinkorean.com/product/hangeul/"
+            target="_blank"
+            >Hangeul Master</a
+          >.<br /><br />It was great seeing you - I hope you had an amazing time
+          learning Hangeul!
+        </p>
+        <p class="signout">
+          Made with ❤️ by
+          <a href="https://github.com/ONESSR/" target="_blank">SSR </a>&copy;
+          2022
+        </p>
+      </footer>
+    </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
