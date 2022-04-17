@@ -1,24 +1,11 @@
-# README - Learning Journey step 7
+# Learn Hangeul
 
-## 7.2 - Your Tribute Page
+## Info
 
-You will now be using git and vscode to:
+This project is a tribute page initiated by the SOC (School of Code).<br>
+The tribute project is to act as a resource for beginners to learn the Korean alphabet called "Hangeul" (also known as Hangul).
+Please feel free to view the project as it stands currently via this url: https://onessr.github.io/Learn-Hangeul/
 
-  * _clone_ your repository to your local machine (use the HTTPS link)
+For more information about the motivations for this project and the planning behind it please continue to see below.
 
-  * _update_ the sample HTML and CSS files with your own code (from CodePen) 
-
-  * _add, commit and push_ your changes to your brand new repository. Pretty cool eh?
-
-<details>
-  <summary>Super Secret Hint</summary>
-  All of these steps have been covered in step 6 of your *learning journey* if you need any clues as to what to do maybe think about looking back at these resources 🤷
- 
- Link to instructions on cloning:https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
-</details>
-
-## 7.3 - Deploying your site using github Pages
-
-Follow the guide [HERE](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
-
-Make sure that the deployed branch is `main` in settings.
+---
