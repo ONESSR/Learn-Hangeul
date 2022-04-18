@@ -304,6 +304,12 @@ nav {
   margin-bottom: 32px;
 }
 
+.card1-heading,
+.card2-heading,
+.card3-heading {
+  font-weight: 700;
+}
+
 .card1-character {
   position: absolute;
   top: 40%;
