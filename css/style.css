@@ -540,9 +540,6 @@ nav {
 
 /* VIDEO */
 .video-container {
-  display: grid;
-  grid-template-rows: 1fr;
-  align-items: center;
   margin: 16px 0 32px 0;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
