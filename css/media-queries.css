@@ -47,15 +47,4 @@
   }
 
   /* VIDEO */
-  .video-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: center;
-    margin: 16px 0 32px 0;
-  }
-
-  .video-text {
-    display: block;
-  }
 }
