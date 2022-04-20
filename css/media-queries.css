@@ -45,4 +45,17 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
+  /* VIDEO */
+  .video-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin: 16px 0 32px 0;
+  }
+
+  .video-text {
+    display: block;
+  }
 }

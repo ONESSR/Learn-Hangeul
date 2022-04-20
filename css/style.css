@@ -508,6 +508,7 @@ nav {
 /* SECTION-FOOTER */
 .section-footer {
   margin-bottom: 64px;
+  line-height: 1.6;
 }
 
 .section-footer a:link,
@@ -535,4 +536,27 @@ nav {
 .signout a:hover,
 .signout a:active {
   color: #5c7cfa;
+}
+
+/* VIDEO */
+.video-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  margin: 16px 0 32px 0;
+}
+
+.video-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.video-text {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333333;
+  display: none;
 }
