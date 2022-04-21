@@ -510,12 +510,14 @@ nav {
   border-top: 1px solid #eeeeee;
 }
 
+.section-footer p {
+  line-height: 1.6;
+}
+
 .footer-container {
   max-width: 620px;
   padding: 0px 20px 0px 20px;
-  margin: 128px auto 64px auto;
-  margin-bottom: 64px;
-  line-height: 1.6;
+  margin: 120px auto 64px auto;
 }
 
 .section-footer a:link,
