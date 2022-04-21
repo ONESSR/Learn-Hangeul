@@ -50,7 +50,7 @@ body {
 }
 
 .main-container {
-  padding: 64px 20px 20px 20px;
+  padding: 64px 20px 0px 20px;
   max-width: 620px;
   margin: 0 auto;
 }
@@ -507,7 +507,13 @@ nav {
 
 /* SECTION-FOOTER */
 .section-footer {
-  margin-bottom: 64px;
+  border-top: 1px solid #eeeeee;
+}
+
+.footer-container {
+  max-width: 620px;
+  padding: 0px 20px 0px 20px;
+  margin: 128px auto 64px auto;
 }
 
 .section-footer a:link,
