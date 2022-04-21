@@ -510,10 +510,6 @@ nav {
   border-top: 1px solid #eeeeee;
 }
 
-.section-footer p {
-  line-height: 1.6;
-}
-
 .footer-container {
   max-width: 620px;
   padding: 0px 20px 0px 20px;
@@ -545,22 +541,4 @@ nav {
 .signout a:hover,
 .signout a:active {
   color: #5c7cfa;
-}
-
-/* VIDEO */
-.video-container {
-  margin: 16px 0 32px 0;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
